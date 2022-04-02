@@ -1,0 +1,14 @@
+#testing a one draw for only one result
+#testando um sorteador para um só resultado
+import random
+pessoas = ( 'Jamily' , 'Leticia' , 'Thalen' , 'Vitor' , 'Caio' , 'Henrico' , 'Gabriel M' , 'Gabriel A' ,
+            'Lucas L' , 'Lucas C' , 'Lucas S' ,  'Marcelo' , 'Jorge' , 'João' , 'Everton' , 'Guilherme' ,
+            'Gustavo')
+escolha = random.choice(pessoas)
+# If you want a real random answer delete while and associates.
+# Se você quer o resultado real, delete o while e partes associadas a ele.
+while escolha != 'João':
+    escolha = random.choice(pessoas)
+    print(escolha)
+print('sorteio')
+print("O vencedor do Sorteio foi o/a : {}".format(escolha))
