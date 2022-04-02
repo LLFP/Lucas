@@ -1,0 +1,18 @@
+# Number based answer
+# Resposta baseada em números
+
+print("Você fez a prova!! ")
+nota = float(input("Qual foi sua nota ? "))
+if 0 <= nota <= 6:
+    print("Nota F")
+elif 6 <= nota <= 7:
+    print("Nota D")
+elif 7 <= nota <= 8:
+    print("Nota C")
+elif 8 <= nota <= 9:
+    print("Nota B")
+elif 9 <= nota <= 10:
+    print("Nota A")
+else:
+    print("Nota Inválida")
+exit(0)
