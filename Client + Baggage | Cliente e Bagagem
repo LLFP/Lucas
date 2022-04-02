@@ -1,0 +1,34 @@
+# peso bagagem aeroporto
+#  import sys
+cliente = (input("Qual o tipo do cliente? "))
+peso = float(input("Qual o peso da bagagem? "))
+#teste para ver o tipo da variável cliente
+print(type(cliente))
+
+if type(cliente) != str:
+    print("erro no cliente ")
+
+print(type(peso))
+if type(peso) != int and type(peso) != float:
+    print("erro no peso")
+
+#  if para cliente premium
+if cliente == "p":
+    print("cliente premium")
+    peso_bagagem = float(peso)
+    if 0 <= peso_bagagem <= 32:
+        print("bagagem dentro do peso permitido!! {}".format(peso_bagagem) + " kg")
+    elif peso_bagagem > 32:
+        print("Bagagem fora do peso permitido!! {}".format(peso_bagagem) + " kg")
+
+#  if para cliente normal
+
+if str(cliente) == "n":
+    print("cliente normal")
+    peso_bagagem = float(peso)
+    if 0 <= peso_bagagem <= 28:
+        print("bagagem dentro do peso permitido!! {}".format(peso_bagagem) + " kg")
+    elif peso_bagagem > 28:
+        print("Bagagem fora do peso permitido!! {}".format(peso_bagagem) + " kg")
+    else:
+        print("erro no programa")
