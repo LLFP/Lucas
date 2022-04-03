@@ -1,0 +1,22 @@
+import sys
+aluno_nota = {}
+notas = []
+aluno = []
+opcao = -1
+print('O objeto do tipo {} e tem {} bytes'.format(type(notas), sys.getsizeof(notas)))
+while opcao != 4:
+    print(' 1 - Cadastrar Nota \n 2 - Exibir Notas \n 3 - Calcular média por Aluno \n 4 - Sair do Programa')
+    opcao = int(input('Qual operação deseja realizar ? '))
+    if opcao == 1:
+        aluno = str(input('Digite o nome do aluno: '))
+        notas = float(input('Digite a nota do aluno: '))
+        aluno_nota[aluno] = notas
+    elif opcao == 2:
+        for x, y in aluno_nota.items():
+            print('O aluno {} tirou: {}'.format(x, y))
+    elif opcao == 3:
+        snota = list(aluno_nota.values())
+        print(snota)
+        print('A média por aluno é: {}'.format(sum(snota) / len(snota)))
+        print('A nota junta de todos os alunos foi: {}'.format(sum(snota)))
+        print('O número de alunos é: {}'.format(len(snota)))
