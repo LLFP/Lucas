@@ -1,11 +1,12 @@
 import sys
+import json
 aluno_nota = {}
 notas = []
 aluno = []
 opcao = -1
 print('O objeto do tipo {} e tem {} bytes'.format(type(notas), sys.getsizeof(notas)))
-while opcao != 4:
-    print(' 1 - Cadastrar Nota \n 2 - Exibir Notas \n 3 - Calcular média por Aluno \n 4 - Sair do Programa')
+while opcao != 5:
+    print(' 1 - Cadastrar Nota \n 2 - Exibir Notas \n 3 - Média/Aluno \n 4 - Salvar as Variaveis \n 5 - Exit')
     opcao = int(input('Qual operação deseja realizar ? '))
     if opcao == 1:
         aluno = str(input('Digite o nome do aluno: '))
@@ -20,3 +21,7 @@ while opcao != 4:
         print('A média por aluno é: {}'.format(sum(snota) / len(snota)))
         print('A nota junta de todos os alunos foi: {}'.format(sum(snota)))
         print('O número de alunos é: {}'.format(len(snota)))
+    elif opcao == 4:
+        alunonota2 = json.dumps(aluno_nota)
+        save3 = open("c:\\users\\lucas\\desktop\\python escrita\\save da tabela.json", "w", encoding="UTF-8")
+        save3.write(alunonota2)
