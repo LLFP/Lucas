@@ -23,5 +23,6 @@ while opcao != 5:
         print('O número de alunos é: {}'.format(len(snota)))
     elif opcao == 4:
         alunonota2 = json.dumps(aluno_nota)
-        save3 = open("c:\\users\\lucas\\desktop\\python escrita\\save da tabela.json", "w", encoding="UTF-8")
+        # Eu tirei o local salvo por que tinha informações pessoais
+        save3 = open("*Local onde vai ser salvo*", "w", encoding="UTF-8")
         save3.write(alunonota2)
